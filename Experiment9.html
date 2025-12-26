@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product Grid</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background-color: rgb(247, 247, 246);
+        }
+
+        .Main{
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #e9ebed;
+            border-radius: 8px;
+        }
+
+        .heading{
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container{
+            display: grid;
+            grid-template-columns: 1fr;   
+            gap: 5px;   
+        }
+
+        .box{
+            background-color: rgb(254, 254, 254);
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 2px 6px rgba(27, 27, 27, 0.08);
+        
+        }
+        .box h2{
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            color: #222;
+        }
+        img{
+            height: 300px;
+        }
+        .box p{
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+            color: rgb(103, 101, 101);
+        }
+
+        .price{
+            font-weight: bold;
+        }
+
+        @media screen and (min-width: 600px) {
+            .container{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            .container{
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="Main">
+        <div class="heading">Responsive Product Grid</div>
+
+        <div class="container">
+            <div class="box">
+                <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mba13-midnight-cto-hero-202503?wid=400&hei=400&fmt=jpeg&qlt=90&.v=Q2E5SzQzQ0daYWpuZGNscHpUSFFEZktybEU1S0RNR1JRamRyTlliVTJCd1ZOYmZXUnpWekhFcFdLRUF2UkJ6V3ZvdUZlR0V0VUdJSjBWaDVNVG95YkpXV0NKZlNobUJyZ1BoelRZL2FGamc" alt="">
+                <h2>Macbook Air M4</h2>
+                <p>Powerful mechine in compact size.</p>
+                <p class="price">₹89,999</p>
+            </div>
+
+            <div class="box">
+                <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-pro-3-hero-select-202509?wid=532&hei=582&fmt=png-alpha&.v=cmp4MmZ6OWxOeHNNTXh4SzlBNUpEb1RucE9zZTI5eEREaWZpY29lSld3eG5ybFVoUG5ONDlkK2JkbHErdVFSNVM0TjRWdzF2UjRGVEY0c3dBQVZ6VFk1ZmVZeDNxQ3ljaDhwR2JKTTZHaDg" alt="">
+                <h2>Apple Airpod 3</h2>
+                <p>Lestin lossless audio at max quality.</p>
+                <p class="price">₹27,999</p>
+            </div>
+
+            <div class="box">
+                <img src="https://www.apple.com/in/iphone/home/images/overview/select/iphone_17__ck7zzemcw37m_large_2x.jpg" alt="">
+                <h2>IPhone 17</h2>
+                <p>Lightweight and pro camera monster battery.</p>
+                <p class="price">₹70,299</p>
+            </div>
+
+            <div class="box">
+                <img src="https://www.apple.com/v/watch/bt/images/overview/select/product_s11__c23ym6fc09me_large_2x.png" alt="">
+                <h2>Apple Watch 6</h2>
+                <p>World in your hand.</p>
+                <p class="price">₹38,999</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
